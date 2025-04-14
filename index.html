@@ -55,7 +55,7 @@
 
   <div id="srilanka" class="country-details bg-light p-3 rounded">
     <h5>تفاصيل الاستقدام من سريلانكا</h5>
-    <p>[ سوف نقوم بكتابة التفاصيل بعد الانتهاء من التصميم انا وانت GPT هههههه ]</p>
+    <p>[اكتب هنا التفاصيل: الأسعار، مدة الوصول، الخطوات...]</p>
   </div>
 
   <div id="bangladesh" class="country-details bg-light p-3 rounded">
@@ -97,3 +97,14 @@
     </iframe>
   </div>
 </section>
+
+<script>
+  function toggleDetails(id) {
+    const sections = document.querySelectorAll('.country-details');
+    sections.forEach(section => section.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
