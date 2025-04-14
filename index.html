@@ -1,135 +1,73 @@
-from pathlib import Path
-
-# محتوى ملف HTML مع كل الأقسام المطلوبة
-html_content = """
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>مكتب الأفق الذهبي للاستقدام</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            direction: rtl;
-            text-align: right;
-        }
-        header, footer {
-            background-color: #004c99;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        .container {
-            padding: 20px;
-        }
-        .section {
-            background: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        button {
-            padding: 10px;
-            border-radius: 8px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-        button:hover {
-            background-color: #45a049;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>مكتب الأفق الذهبي للاستقدام</h1>
-    </header>
-
-    <div class="container">
-        <div class="section">
-            <h2>الرؤية</h2>
-            <p>تقديم أفضل خدمات الاستقدام بموثوقية وسرعة وراحة للعملاء.</p>
-        </div>
-
-        <div class="section">
-            <h2>من نحن</h2>
-            <p>مكتب الأفق الذهبي مرخص رسميًا لتقديم خدمات استقدام العمالة المنزلية من عدة دول.</p>
-        </div>
-
-        <div class="section">
-            <h2>خطوات الاستقدام</h2>
-            <p>ابدأ معنا رحلة الاستقدام بخطوات بسيطة عبر منصة مساند:</p>
-            <ul>
-                <li><strong>استخراج التأشيرة:</strong> وفق ضوابط وزارة العمل.</li>
-                <li><strong>اختيار السيرة الذاتية:</strong> من خلالنا.</li>
-                <li><strong>التعاقد:</strong> عبر منصة مساند.</li>
-                <li><strong>السداد:</strong> عبر البنك ومنصة مساند.</li>
-                <li><strong>مدة الوصول:</strong> أقصاها 90 يوماً، وعادة خلال 45 يوماً.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>الدول التي نستقدم منها</h2>
-
-            <div>
-                <h3>سريلانكا</h3>
-                <p>تفاصيل الاستقدام من سريلانكا...</p>
-                <a href="cv-srilanka.jpeg" download><button>تحميل السيرة الذاتية</button></a>
-            </div>
-
-            <div>
-                <h3>بنجلاديش</h3>
-                <p>تفاصيل الاستقدام من بنجلاديش...</p>
-                <a href="cv-bangladesh.jpeg" download><button>تحميل السيرة الذاتية</button></a>
-            </div>
-
-            <div>
-                <h3>إثيوبيا</h3>
-                <p>تفاصيل الاستقدام من إثيوبيا...</p>
-                <a href="cv-ethiopia.jpeg" download><button>تحميل السيرة الذاتية</button></a>
-            </div>
-
-            <div>
-                <h3>أوغندا</h3>
-                <p>تفاصيل الاستقدام من أوغندا...</p>
-                <a href="cv-uganda.jpeg" download><button>تحميل السيرة الذاتية</button></a>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>موقعنا</h2>
-            <a href="https://maps.app.goo.gl/YfK7SgV4gc8pQgqs7" target="_blank">اضغط هنا لعرض موقع المكتب على الخريطة</a>
-        </div>
-
-        <div class="section">
-            <h2>روابط مهمة</h2>
-            <ul>
-                <li><a href="#">منصة مساند</a></li>
-                <li><a href="#">ضوابط التأشيرة</a></li>
-                <li><a href="#">الأسئلة الشائعة</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <footer>
-        <p>تواصل معنا: saudalmuteri1@gmail.com | 0137255111 | 0532101626 | 0534999139</p>
-        <p><a href="https://wa.me/message/WMLCHC2IJZ7AM1" style="color:white;">تواصل عبر واتساب</a></p>
-        <p>العنوان: طريق الملك خالد 31991، حفر الباطن، السعودية</p>
-    </footer>
-</body>
-</html>
-"""
-
-# حفظ الملف
-project_dir = Path("/mnt/data/alafq-site")
-project_dir.mkdir(parents=True, exist_ok=True)
-html_path = project_dir / "index.html"
-html_path.write_text(html_content, encoding="utf-8")
-
-html_path.name  # Return the name for confirmation
+  <meta charset="UTF-8">
+  <title>مكتب الأفق الذهبي للاستقدام</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #b1976b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background-color: #e0d4b3;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+      background-color: white;
+      margin: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #b1976b;
+    }
+    .country {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+    .download-btn {
+      background-color: #b1976b;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 10px;
+    }
+    .contact-info {
+      line-height: 1.8;
+    }
+    .links ul {
+      list-style: none;
+      padding: 0;
+    }
+    .links ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (
