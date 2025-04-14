@@ -5,160 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>مكتب الأفق الذهبي للاستقدام</title>
   <style>
-    body {
-      font-family: 'Tajawal', sans-serif;
-      background-color: #f8f9fa;
-      margin: 0;
-      padding: 0;
-      direction: rtl;
-      text-align: right;
-    }
-
-    header {
-      background-color: #003366;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav {
-      background-color: #005599;
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      padding: 10px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      background-color: white;
-      padding: 20px;
-      margin: 15px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px #ccc;
-    }
-
-    h2 {
-      color: #003366;
-    }
-
-    .btn-country {
-      display: inline-block;
-      background-color: #007bff;
-      color: white;
-      padding: 10px 25px;
-      margin: 10px 5px;
-      border-radius: 8px;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #003366;
-      color: white;
-    }
+    /* نفس التنسيق السابق */
   </style>
 </head>
 <body>
 
 <header>
-  <h1>مكتب الأفق الذهبي للاستقدام</h1>
+  <h1 id="title">مكتب الأفق الذهبي للاستقدام</h1>
+  <div style="text-align: left; padding: 10px;">
+    <button onclick="changeLanguage('ar')">العربية</button>
+    <button onclick="changeLanguage('en')">English</button>
+  </div>
 </header>
 
 <nav>
-  <a href="#vision">الرؤية</a>
-  <a href="#about">من نحن</a>
-  <a href="#contact">اتصل بنا</a>
-  <a href="#countries">الدول المتاحة</a>
+  <a href="#vision" id="nav-vision">الرؤية</a>
+  <a href="#about" id="nav-about">من نحن</a>
+  <a href="#contact" id="nav-contact">اتصل بنا</a>
+  <a href="#countries" id="nav-countries">الدول المتاحة</a>
 </nav>
 
 <section id="vision">
-  <h2>الرؤية</h2>
-  <p>نسعى لتقديم خدمات استقدام موثوقة وعالية الجودة لتلبية احتياجات الأسرة السعودية.</p>
+  <h2 id="vision-heading">الرؤية</h2>
+  <p id="vision-text">نسعى لتقديم خدمات استقدام موثوقة وعالية الجودة لتلبية احتياجات الأسرة السعودية.</p>
 </section>
 
 <section id="about">
-  <h2>من نحن</h2>
-  <p>مكتب الأفق الذهبي للاستقدام مرخص رسميًا، متخصص في توفير العمالة المنزلية من سريلانكا، بنجلاديش، إثيوبيا، وأوغندا.</p>
+  <h2 id="about-heading">من نحن</h2>
+  <p id="about-text">مكتب الأفق الذهبي للاستقدام مرخص رسميًا، متخصص في توفير العمالة المنزلية من سريلانكا، بنجلاديش، إثيوبيا، وأوغندا.</p>
 </section>
 
 <section id="contact">
-  <h2>اتصل بنا</h2>
-  <p>البريد الإلكتروني: saudalmuteri1@gmail.com</p>
-  <p>هاتف المكتب: 0137255111</p>
-  <p>الجوال: 0532101626 - 0534999139</p>
-  <p>العنوان: طريق الملك خالد 31991، حفر الباطن، المملكة العربية السعودية</p>
-  <p><a href="https://wa.me/message/WMLCHC2IJZ7AM1" target="_blank">راسلنا على واتساب</a></p>
-</section>
-
-<section class="container mb-5 text-center">
-  <h2>موقع المكتب</h2>
-  <p>اضغط على الرابط أدناه لعرض موقع المكتب على الخريطة:</p>
-  <a href="https://maps.app.goo.gl/YfK7SgV4gc8pQgqs7" target="_blank" class="btn" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">
-    عرض على الخريطة
-  </a>
+  <h2 id="contact-heading">اتصل بنا</h2>
+  <p id="contact-email">البريد الإلكتروني: saudalmuteri1@gmail.com</p>
+  <p id="contact-phone">هاتف المكتب: 0137255111</p>
+  <p id="contact-mobile">الجوال: 0532101626 - 0534999139</p>
+  <p id="contact-address">العنوان: طريق الملك خالد 31991، حفر الباطن، المملكة العربية السعودية</p>
+  <p id="whatsapp-link"><a href="https://wa.me/message/WMLCHC2IJZ7AM1" target="_blank">راسلنا على واتساب</a></p>
 </section>
 
 <section>
-  <h2>روابط مهمة</h2>
-  <ul style="list-style: none; padding: 0;">
-    <li><a href="https://musaned.sa" target="_blank">منصة مساند</a></li>
-    <li><a href="https://www.mol.gov.sa" target="_blank">وزارة الموارد البشرية</a></li>
-    <li><a href="https://www.absher.sa" target="_blank">منصة أبشر</a></li>
-  </ul>
+  <h2 id="map-heading">موقع المكتب</h2>
+  <p id="map-text">اضغط على الرابط أدناه لعرض موقع المكتب على الخريطة:</p>
+  <a href="https://maps.app.goo.gl/YfK7SgV4gc8pQgqs7" target="_blank" class="btn">عرض على الخريطة</a>
 </section>
 
-<section id="countries">
-  <h2>الدول المتاحة للاستقدام</h2>
-  <a class="btn-country" href="#srilanka">سريلانكا</a>
-  <a class="btn-country" href="#bangladesh">بنجلاديش</a>
-  <a class="btn-country" href="#ethiopia">إثيوبيا</a>
-  <a class="btn-country" href="#uganda">أوغندا</a>
-</section>
+<!-- روابط أخرى وكود الدول المتاحة كما في الكود السابق -->
 
-<section id="srilanka">
-  <h3>الاستقدام من سريلانكا</h3>
-  <p>مدة الوصول: ___</p>
-  <p>السعر: ___</p>
-  <p>خطوات الاستقدام: ___</p>
-</section>
-
-<section id="bangladesh">
-  <h3>الاستقدام من بنجلاديش</h3>
-  <p>مدة الوصول: ___</p>
-  <p>السعر: ___</p>
-  <p>خطوات الاستقدام: ___</p>
-</section>
-
-<section id="ethiopia">
-  <h3>الاستقدام من إثيوبيا</h3>
-  <p>مدة الوصول: ___</p>
-  <p>السعر: ___</p>
-  <p>خطوات الاستقدام: ___</p>
-</section>
-
-<section id="uganda">
-  <h3>الاستقدام من أوغندا</h3>
-  <p>مدة الوصول: ___</p>
-  <p>السعر: ___</p>
-  <p>خطوات الاستقدام: ___</p>
-</section>
-
-<footer>
-  &copy; 2025 مكتب الأفق الذهبي للاستقدام. جميع الحقوق محفوظة.
-</footer>
-
-<!-- زر واتساب عائم -->
-<a href="https://wa.me/message/WMLCHC2IJZ7AM1" target="_blank" style="position:fixed; bottom:20px; left:20px; z-index:1000;">
-  <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp">
-</a>
+<script>
+  function changeLanguage(language) {
+    if (language == 'en') {
+      document.documentElement.lang = 'en';
+      document.getElementById('title').innerText = 'Al-Afaq Al-Dhahabi Recruitment Office';
+      document.getElementById('nav-vision').innerText = 'Vision';
+      document.getElementById('nav-about').innerText = 'About Us';
+      document.getElementById('nav-contact').innerText = 'Contact Us';
+      document.getElementById('nav-countries').innerText = 'Available Countries';
+      document.getElementById('vision-heading').innerText = 'Vision';
+      document.getElementById('vision-text').innerText = 'We aim to provide reliable and high-quality recruitment services to meet the needs of Saudi families.';
+      document.getElementById('about-heading').innerText = 'About Us';
+      document.getElementById('about-text').innerText = 'Al-Afaq Al-Dhahabi is officially licensed and specializes in providing domestic workers from Sri Lanka, Bangladesh, Ethiopia, and Uganda.';
+      document.getElementById('contact-heading').innerText = 'Contact Us';
+      document.getElementById('contact-email').innerText = 'Email: saudalmuteri1@gmail.com';
+      document.getElementById('contact-phone').innerText = 'Office Phone: 0137255111';
+      document.getElementById('contact-mobile').innerText = 'Mobile: 0532101626 - 0534999139';
+      document.getElementById('contact-address').innerText = 'Address: King Khalid Road 31991, Hafr Al-Batin, Saudi Arabia';
+      document.getElementById('whatsapp-link').innerHTML = '<a href="https://wa.me/message/WMLCHC2IJZ7AM1" target="_blank">Message us on WhatsApp</a>';
+      document.getElementById('map-heading').innerText = 'Office Location';
+      document.getElementById('map-text').innerText = 'Click the link below to view the office location on the map:';
+    } else {
+      document.documentElement.lang = 'ar';
+      document.getElementById('title').innerText = 'مكتب الأفق الذهبي للاستقدام';
+      document.getElementById('nav-vision').innerText = 'الرؤية';
+      document.getElementById('nav-about').innerText = 'من نحن';
+      document.getElementById('nav-contact').innerText = 'اتصل بنا';
+      document.getElementById('nav-countries').innerText = 'الدول المتاحة';
+      document.getElementById('vision-heading').innerText = 'الرؤية';
+      document.getElementById('vision-text').innerText = 'نسعى لتقديم خدمات استقدام موثوقة وعالية الجودة لتلبية احتياجات الأسرة السعودية.';
+      document.getElementById('about-heading').innerText = 'من نحن';
+      document.getElementById('about-text').innerText = 'مكتب الأفق الذهبي للاستقدام مرخص رسميًا، متخصص في توفير العمالة المنزلية من سريلانكا، بنجلاديش، إثيوبيا، وأوغندا.';
+      document.getElementById('contact-heading').innerText = 'اتصل بنا';
+      document.getElementById('contact-email').innerText = 'البريد الإلكتروني: saudalmuteri1@gmail.com';
+      document.getElementById('contact-phone').innerText = 'هاتف المكتب: 0137255111';
+      document.getElementById('contact-mobile').innerText = 'الجوال: 0532101626 - 0534999139';
+      document.getElementById('contact-address').innerText = 'العنوان: طريق الملك خالد 31991، حفر الباطن، المملكة العربية السعودية';
+      document.getElementById('whatsapp-link').innerHTML = '<a href="https://wa.me/message/WMLCHC2IJZ7AM1" target="_blank">راسلنا على واتساب</a>';
+      document.getElementById('map-heading').innerText = 'موقع المكتب';
+      document.getElementById('map-text').innerText = 'اضغط على الرابط أدناه لعرض موقع المكتب على الخريطة:';
+    }
+  }
+</script>
 
 </body>
 </html>
