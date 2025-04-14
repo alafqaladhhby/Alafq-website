@@ -95,4 +95,64 @@
 
     <div class="container">
         <!-- Header Section -->
-        <h1 id="header">مكتب الأفق الذهبي للاستقدام
+        <h1 id="header">مكتب الأفق الذهبي للاستقدام</h1>
+        <p id="description">نحن متخصصون في توفير العمالة المنزلية من دول متعددة.</p>
+
+        <!-- Office Images Section -->
+        <h2>صور المكتب</h2>
+        <div class="office-images">
+            <img src="image1.jpg" alt="صورة المكتب 1">
+            <img src="image2.jpg" alt="صورة المكتب 2">
+            <img src="image3.jpg" alt="صورة المكتب 3">
+        </div>
+
+        <!-- Contact Section -->
+        <h2>بيانات التواصل</h2>
+        <p id="contact">البريد الإلكتروني: saudalmuteri1@gmail.com</p>
+        <p id="phone">رقم الهاتف: 0137255111</p>
+        <p id="mobile">رقم الجوال: 0532101626 / 0534999139</p>
+
+        <!-- CV Upload Section -->
+        <h2>تحميل السيرة الذاتية</h2>
+        <a href="cv125.jpeg" class="download-btn" download>تحميل السيرة الذاتية</a>
+
+        <!-- Footer Section with link to the homepage -->
+        <footer>
+            <p id="footer">
+                جميع الحقوق محفوظة لمكتب الأفق الذهبي للاستقدام. 
+                <a href="https://www.alafqaladhhby.com" target="_blank" id="site-link">موقع المكتب</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // Function to change language
+        function changeLanguage() {
+            var language = document.getElementById("language").value;
+
+            if (language === "en") {
+                document.body.setAttribute("lang", "en");
+                document.getElementById("header").innerText = "Golden Horizon Recruitment Office";
+                document.getElementById("description").innerText = "We specialize in providing domestic workers from various countries.";
+                document.getElementById("contact").innerText = "Email: saudalmuteri1@gmail.com";
+                document.getElementById("phone").innerText = "Phone Number: 0137255111";
+                document.getElementById("mobile").innerText = "Mobile Numbers: 0532101626 / 0534999139";
+                document.getElementById("footer").innerText = "All rights reserved for Golden Horizon Recruitment Office.";
+                document.getElementById("site-link").innerText = "Visit our site";
+                document.querySelector(".marquee").innerText = "Welcome to the Golden Horizon Recruitment Office website - We always provide the best services.";
+            } else {
+                document.body.setAttribute("lang", "ar");
+                document.getElementById("header").innerText = "مكتب الأفق الذهبي للاستقدام";
+                document.getElementById("description").innerText = "نحن متخصصون في توفير العمالة المنزلية من دول متعددة.";
+                document.getElementById("contact").innerText = "البريد الإلكتروني: saudalmuteri1@gmail.com";
+                document.getElementById("phone").innerText = "رقم الهاتف: 0137255111";
+                document.getElementById("mobile").innerText = "رقم الجوال: 0532101626 / 0534999139";
+                document.getElementById("footer").innerText = "جميع الحقوق محفوظة لمكتب الأفق الذهبي للاستقدام.";
+                document.getElementById("site-link").innerText = "زيارة موقعنا";
+                document.querySelector(".marquee").innerText = "مرحباً بك في موقع مكتب الأفق الذهبي للاستقدام - نعمل دائماً على توفير أفضل الخدمات.";
+            }
+        }
+    </script>
+
+</body>
+</html>
