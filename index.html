@@ -1,194 +1,98 @@
-
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>مكتب الأفق الذهبي للاستقدام</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background-color: #f2f2f2;
-      margin: 0;
-      padding: 0;
-    }
-    header, footer {
-      background-color: #b1976b;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #e0d4b3;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      margin: 0 15px;
-      color: #333;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    section {
-      padding: 20px;
-      background-color: white;
-      margin: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: #b1976b;
-    }
-    .country {
-      border: 1px solid #ccc;
-      padding: 15px;
-      margin-top: 10px;
-      border-radius: 8px;
-    }
-    .download-btn {
-      background-color: #b1976b;
-      color: white;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 10px;
-    }
-    .contact-info {
-      line-height: 1.8;
-    }
-    .links ul {
-      list-style: none;
-      padding: 0;
-    }
-    .links ul li {
-      margin-bottom: 10px;
-    }
-    .footer-section {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    @media (min-width: 768px) {
-      .footer-section {
-        flex-direction: row;
-        justify-content: space-around;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مكتب الأفق الذهبي للاستقدام</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            direction: rtl;
+            text-align: right;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+        .language-selector {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 18px;
+        }
+        .language-selector select {
+            padding: 5px;
+        }
+        /* Styling for the moving text (Marquee) */
+        .marquee {
+            background-color: #f8d7da;
+            color: #721c24;
+            padding: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* Styling for the office images */
+        .office-images {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+        .office-images img {
+            width: 30%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+        /* Styling for footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f1f1f1;
+            margin-top: 40px;
+        }
+        footer a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .download-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .download-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>مكتب الأفق الذهبي للاستقدام</h1>
-</header>
-
-<nav>
-  <a href="#home">الصفحة الرئيسية</a>
-  <a href="#vision">الرؤية</a>
-  <a href="#about">من نحن</a>
-  <a href="#process">خطوات الاستقدام</a>
-  <a href="#countries">الدول المتاحة</a>
-  <a href="#contact">اتصل بنا</a>
-</nav>
-
-<section id="home">
-  <h2>الصفحة الرئيسية</h2>
-  <p>عميلنا العزيز، نسعد بخدمتكم. ابدأ معنا رحلة الاستقدام وأنت في منزلك.</p>
-</section>
-
-<section id="vision">
-  <h2>الرؤية</h2>
-  <p>نسعى لتقديم خدمات استقدام عالية الجودة بموثوقية وسرعة.</p>
-</section>
-
-<section id="about">
-  <h2>من نحن</h2>
-  <p>مكتب الأفق الذهبي للاستقدام متخصص في توفير العمالة المنزلية من عدة دول مثل سريلانكا، بنجلاديش، إثيوبيا، وأوغندا.</p>
-</section>
-
-<section id="process">
-  <h2>خطوات الاستقدام</h2>
-  <p>نتابع معك خطوة بخطوة:</p>
-  <ul>
-    <li><strong>1.</strong> استخراج التأشيرة</li>
-    <li><strong>2.</strong> اختيار السيرة الذاتية</li>
-    <li><strong>3.</strong> التعاقد عبر منصة مساند</li>
-    <li><strong>4.</strong> سداد الفاتورة وانتظار العاملة</li>
-  </ul>
-  <p>مدة الوصول 90 يوماً كحد أقصى، وغالباً لا تتجاوز 45 يوماً. نخدم جميع مناطق المملكة.</p>
-  <p><a href="#visa-steps" class="download-btn">تفاصيل خطوات التأشيرة</a></p>
-</section>
-
-<section id="countries">
-  <h2>الدول المتاحة للاستقدام</h2>
-
-  <div class="country">
-    <h3>سريلانكا</h3>
-    <p>مدة الوصول: 45-60 يوم</p>
-    <a href="cv-srilanka.jpeg" class="download-btn" download>تحميل السيرة الذاتية</a>
-  </div>
-
-  <div class="country">
-    <h3>بنجلاديش</h3>
-    <p>مدة الوصول: 45-60 يوم</p>
-    <a href="cv-bangladesh.jpeg" class="download-btn" download>تحميل السيرة الذاتية</a>
-  </div>
-
-  <div class="country">
-    <h3>إثيوبيا</h3>
-    <p>مدة الوصول: 30-45 يوم</p>
-    <a href="cv-ethiopia.jpeg" class="download-btn" download>تحميل السيرة الذاتية</a>
-  </div>
-
-  <div class="country">
-    <h3>أوغندا</h3>
-    <p>مدة الوصول: 30-45 يوم</p>
-    <a href="cv-uganda.jpeg" class="download-btn" download>تحميل السيرة الذاتية</a>
-  </div>
-</section>
-
-<section id="visa-steps">
-  <h2>خطوات استخراج التأشيرة</h2>
-  <ul>
-    <li>سداد قيمة التأشيرة عبر المدفوعات الحكومية</li>
-    <li>القدرة المالية (شهادة بنكية أو تعريف راتب)</li>
-    <li>الدخول على منصة مساند</li>
-    <li>اختيار الجنسية والمهنة وسداد رسوم مساند</li>
-    <li>انتظار صدور التأشيرة</li>
-  </ul>
-  <p><a href="https://musaned.com.sa/" target="_blank">رابط منصة مساند</a></p>
-</section>
-
-<section id="contact">
-  <h2>بيانات التواصل</h2>
-  <div class="contact-info">
-    <p><strong>البريد الإلكتروني:</strong> saudalmuteri1@gmail.com</p>
-    <p><strong>الهاتف:</strong> 0137255111</p>
-    <p><strong>الجوال:</strong> 0532101626 / 0534999139</p>
-    <p><strong>واتساب:</strong> <a href="https://wa.me/message/WMLCHC2IJZ7AM1" target="_blank">اضغط هنا للتواصل</a></p>
-    <p><strong>العنوان:</strong> طريق الملك خالد 31991، حفر الباطن، المملكة العربية السعودية</p>
-    <p><strong>موقع المكتب:</strong> <a href="https://maps.app.goo.gl/YfK7SgV4gc8pQgqs7" target="_blank">اضغط لعرض الموقع على الخريطة</a></p>
-  </div>
-</section>
-
-<footer>
-  <div class="footer-section">
-    <div class="links">
-      <h3>روابط مهمة</h3>
-      <ul>
-        <li><a href="https://musaned.com.sa/">منصة مساند</a></li>
-        <li><a href="#countries">الدول المتاحة</a></li>
-        <li><a href="#process">خطوات الاستقدام</a></li>
-      </ul>
+    <!-- Language Selector -->
+    <div class="language-selector">
+        <label for="language">اختر اللغة:</label>
+        <select id="language" onchange="changeLanguage()">
+            <option value="ar">العربية</option>
+            <option value="en">English</option>
+        </select>
     </div>
-    <div>
-      <img src="logo.png" alt="شعار المكتب" width="100">
-    </div>
-  </div>
-</footer>
 
-</body>
-</html>
+    <!-- Marquee (Moving text) -->
+    <div class="marquee">
+        مرحباً بك في موقع مكتب الأفق الذهبي للاستقدام - نعمل دائماً على توفير أفضل الخدمات.
+    </div>
+
+    <div class="container">
+        <!-- Header Section -->
+        <h1 id="header">مكتب الأفق الذهبي للاستقدام
