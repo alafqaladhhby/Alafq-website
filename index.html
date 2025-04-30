@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -38,6 +37,53 @@
       text-decoration: none;
       font-weight: bold;
     }
+    .hero {
+      height: 90vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    .hero-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+    .hero-slide.active {
+      opacity: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: white;
+      max-width: 600px;
+    }
+    .hero-content a {
+      background-color: #C7A144;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+    }
+    .hero-content a:hover {
+      background-color: #b08e3c;
+    }
     .section-title {
       text-align: center;
       color: #C7A144;
@@ -57,46 +103,112 @@
       text-align: center;
     }
     .card img {
-      max-width: 100%;
-      border-radius: 8px;
+      max-width: 60px;
       margin-bottom: 10px;
     }
-    .testimonial-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      padding: 0 20px 40px;
+    .card h4 {
+      color: #C7A144;
     }
-    .testimonial {
-      background: #fff;
-      border-radius: 10px;
-      padding: 20px;
-      width: 260px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      text-align: center;
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      background-color: #C7A144;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: bold;
     }
-    .testimonial img {
-      width: 60px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-    }
-    footer {
-      background: #f7f3e9;
-      padding: 30px 20px;
-      text-align: center;
-      font-size: 14px;
-      line-height: 1.8;
-    }
-    footer a {
-      color: #1E2A38;
-      text-decoration: underline;
+    .card a:hover {
+      background-color: #b08e3c;
     }
   </style>
 </head>
 <body>
 
-<!-- معرض الصور -->
+<header>
+  <h1>مكتب الأفق الذهبي للاستقدام</h1>
+  <a href="index-en.html" style="color:white;">English</a>
+</header>
+
+<nav>
+  <a href="#">الرئيسية</a>
+  <a href="#services">الخدمات</a>
+  <a href="#countries">الدول</a>
+  <a href="#steps">مراحل الاستقدام</a>
+  <a href="#cvs">السير الذاتية</a>
+  <a href="#gallery">معرض الصور</a>
+  <a href="#testimonials">التقييمات</a>
+  <a href="#contact">اتصل بنا</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-slide active" style="background-image: url('assets/hero1.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('assets/hero2.jpg');"></div>
+  <div class="hero-slide" style="background-image: url('assets/hero3.jpg');"></div>
+  <div class="hero-content">
+    <h2>استقدام العمالة بسهولة وثقة</h2>
+    <p>نحن نضمن لك خدمات احترافية وأسعار مناسبة</p>
+    <a href="#services">اطلع على خدماتنا</a>
+  </div>
+</section>
+
+<h2 class="section-title" id="services">خدماتنا</h2>
+<div class="grid">
+  <div class="card"><img src="assets/maid-icon.png" alt="عاملة منزلية"><h4>عاملة منزلية</h4><p>استقدام عاملات مدربات من عدة دول.</p></div>
+  <div class="card"><img src="assets/driver-icon.png" alt="سائق خاص"><h4>سائق خاص</h4><p>سائقين ذوي خبرة عالية.</p></div>
+  <div class="card"><img src="assets/transfer-icon.png" alt="نقل خدمات"><h4>نقل خدمات</h4><p>قريباً...</p></div>
+  <div class="card"><img src="assets/temporary-icon.png" alt="تأجير عاملات"><h4>تأجير عاملات</h4><p>قريباً...</p></div>
+  <div class="card"><img src="assets/maroof-icon.png" alt="معين بالاسم"><h4>استقدام معين بالاسم</h4><p>إجراءات موثقة وسريعة.</p></div>
+</div>
+<h2 class="section-title" id="countries">الدول المتاحة</h2>
+<div class="grid">
+  <div class="card"><img src="assets/flag-srilanka.png"><h4>سريلانكا</h4><p>مدة الوصول: 45-60 يوم</p><a href="https://wa.me/message/WMLCHC2IJZ7AM1">طلب استقدام</a></div>
+  <div class="card"><img src="assets/flag-bangladesh.png"><h4>بنجلاديش</h4><p>مدة الوصول: 45-60 يوم</p><a href="https://wa.me/message/WMLCHC2IJZ7AM1">طلب استقدام</a></div>
+  <div class="card"><img src="assets/flag-ethiopia.png"><h4>إثيوبيا</h4><p>مدة الوصول: 30-45 يوم</p><a href="https://wa.me/message/WMLCHC2IJZ7AM1">طلب استقدام</a></div>
+  <div class="card"><img src="assets/flag-uganda.png"><h4>أوغندا</h4><p>مدة الوصول: 30-45 يوم</p><a href="https://wa.me/message/WMLCHC2IJZ7AM1">طلب استقدام</a></div>
+</div>
+
+<h2 class="section-title" id="steps">مراحل الاستقدام</h2>
+<div class="grid">
+  <div class="card"><h4>الخطوة 1</h4><p>استخراج التأشيرة</p></div>
+  <div class="card"><h4>الخطوة 2</h4><p>اختيار السيرة الذاتية</p></div>
+  <div class="card"><h4>الخطوة 3</h4><p>التعاقد عبر منصة مساند</p></div>
+  <div class="card"><h4>الخطوة 4</h4><p>وصول العاملة إلى باب منزلك</p></div>
+</div>
+
+<h2 class="section-title" id="cvs">السير الذاتية</h2>
+<div class="grid">
+  <div class="card"><img src="assets/flag-srilanka.png"><h4>سريلانكا</h4><a href="cv/srilanka-cv.jpeg" download>تحميل السيرة</a></div>
+  <div class="card"><img src="assets/flag-bangladesh.png"><h4>بنجلاديش</h4><a href="cv/cv125.jpeg" download>تحميل السيرة</a></div>
+  <div class="card"><img src="assets/flag-ethiopia.png"><h4>إثيوبيا</h4><a href="cv/cv126.jpeg" download>تحميل السيرة</a></div>
+  <div class="card"><img src="assets/flag-uganda.png"><h4>أوغندا</h4><a href="cv/cv125.jpeg" download>تحميل السيرة</a></div>
+</div>
+
+<h2 class="section-title" id="request-form">طلب استقدام</h2>
+<div class="card" style="max-width: 600px; margin: 0 auto 40px;">
+  <form action="https://formsubmit.co/info@goldenhorizon.com.sa" method="POST">
+    <label>الاسم الكامل:</label><br>
+    <input type="text" name="الاسم الكامل" required><br><br>
+
+    <label>رقم الهوية / السجل المدني:</label><br>
+    <input type="text" name="رقم الهوية" required><br><br>
+
+    <label>رقم التأشيرة:</label><br>
+    <input type="text" name="رقم التأشيرة"><br><br>
+
+    <label>تاريخ الميلاد:</label><br>
+    <input type="date" name="تاريخ الميلاد"><br><br>
+
+    <label>رقم الجوال:</label><br>
+    <input type="tel" name="رقم الجوال" required><br><br>
+
+    <label>البريد الإلكتروني:</label><br>
+    <input type="email" name="البريد الإلكتروني"><br><br>
+
+    <button type="submit" class="btn-primary">إرسال الطلب</button>
+  </form>
+</div>
 <h2 class="section-title" id="gallery">معرض الصور</h2>
 <div class="grid">
   <div class="card"><img src="assets/gallery-srilanka.jpg" alt="سريلانكا"><h4>عاملات سريلانكا</h4></div>
@@ -105,27 +217,25 @@
   <div class="card"><img src="assets/gallery-uganda.jpg" alt="أوغندا"><h4>عاملات أوغندا</h4></div>
 </div>
 
-<!-- التقييمات -->
 <h2 class="section-title" id="testimonials">آراء العملاء</h2>
 <div class="testimonial-container">
   <div class="testimonial">
-    <img src="assets/user1.png" alt="عميل">
+    <img src="assets/user1.png" alt="عميل" style="width:60px; border-radius: 50%; margin-bottom:10px;">
     <p>"خدمة ممتازة وسريعة. شكراً للأفق الذهبي."</p>
     <strong>عبدالله - الرياض</strong>
   </div>
   <div class="testimonial">
-    <img src="assets/user2.png" alt="عميلة">
+    <img src="assets/user2.png" alt="عميلة" style="width:60px; border-radius: 50%; margin-bottom:10px;">
     <p>"العاملة وصلت في الموعد وكانت جيدة."</p>
     <strong>أم ناصر - الدمام</strong>
   </div>
   <div class="testimonial">
-    <img src="assets/user3.png" alt="عميل">
+    <img src="assets/user3.png" alt="عميل" style="width:60px; border-radius: 50%; margin-bottom:10px;">
     <p>"أنصح الجميع بالتعامل مع المكتب."</p>
     <strong>سالم العتيبي - جدة</strong>
   </div>
 </div>
 
-<!-- خريطة الموقع -->
 <h2 class="section-title">موقع المكتب</h2>
 <div style="text-align: center; padding: 0 20px 40px;">
   <iframe 
@@ -133,6 +243,31 @@
     width="100%" height="350" style="border:0; border-radius:10px;" allowfullscreen="" loading="lazy">
   </iframe>
 </div>
+
+<footer id="contact">
+  <strong>العنوان:</strong> طريق الملك خالد، حفر الباطن، السعودية<br>
+  <strong>البريد:</strong> info@goldenhorizon.com.sa<br>
+  <strong>الهواتف:</strong> +966532101626 / +966534999139 / +966530640014 / +966137255111<br>
+  <strong>الضريبة:</strong> 310335007200003<br>
+  <a href="https://wa.me/message/WMLCHC2IJZ7AM1">واتساب أعمال موثق</a><br><br>
+  <strong>روابط:</strong> 
+  <a href="https://mc.gov.sa/">وزارة التجارة</a> |
+  <a href="https://zatca.gov.sa/">الزكاة والضرائب</a> |
+  <a href="https://hrsd.gov.sa/">الموارد البشرية</a> |
+  <a href="https://musaned.com.sa/">منصة مساند</a><br><br>
+  &copy; 2025 مكتب الأفق الذهبي للاستقدام. جميع الحقوق محفوظة.
+</footer>
+
+<script>
+  const slides = document.querySelectorAll(".hero-slide");
+  let current = 0;
+  function showNextSlide() {
+    slides[current].classList.remove("active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("active");
+  }
+  setInterval(showNextSlide, 5000);
+</script>
 
 </body>
 </html>
