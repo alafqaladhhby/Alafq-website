@@ -139,7 +139,23 @@
   </style>
 </head>
 <body>
-
+  <button id="langToggle" style="
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+  background-color: #C7A144;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  font-size: 16px;
+">
+  ...
+</button>
 <header>
   <h1>مكتب الأفق الذهبي للاستقدام</h1>
   <a href="index-en.html" style="color:white;">English</a>
@@ -301,6 +317,26 @@
   }
   setInterval(showNextSlide, 5000);
 </script>
+<style>
+  @media (max-width: 600px) {
+    #langToggle {
+      padding: 8px 12px;
+      font-size: 13px;
+      top: 10px;
+      left: 10px;
+    }
+  }
+</style>
 
+<script>
+  const toggleButton = document.getElementById("langToggle");
+  const currentPath = window.location.pathname;
+  toggleButton.innerText = currentPath.includes("index-en.html") ? "العربية" : "English";
+
+  toggleButton.addEventListener("click", () => {
+    const target = currentPath.includes("index-en.html") ? "index.html" : "index-en.html";
+    window.location.href = target;
+  });
+</script>
 </body>
 </html>
