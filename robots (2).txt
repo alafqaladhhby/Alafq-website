@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.goldenhorizon.com.sa/sitemap.xml
